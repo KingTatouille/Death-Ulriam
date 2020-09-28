@@ -1,0 +1,13 @@
+potions:
+  SLOWNESS:
+    type: SLOW
+    duration: 900
+    niveau: 2
+  MINING:
+    type: FAST_DIGGING
+    duration: 900
+    niveau: 1
+  WEAKNESS:
+    type: WEAKNESS
+    duration: 600
+    niveau: 1

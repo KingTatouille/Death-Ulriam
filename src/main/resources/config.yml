@@ -1,0 +1,19 @@
+#prefix
+prefix: "&6&lUlriam &7&l>>&r"
+
+#Quand les joueurs respawn, on met la nourriture à :
+food: 10
+
+#Quand les joueurs respawn, on met la vie à :
+vie: 10
+
+#Duration sert à remettre la vie du joueur à 10
+duration: 300
+
+#Configurer les messages ici
+messages:
+  player:
+    killedByPlayer: "Vous venez de respawn là où vous êtes mort, vous devez donc un prisonnier."
+    killedByNature: "Vous venez de respawn dans votre lit !"
+    noBed: "Vous n'avez pas de lit, vous êtes donc au spawn."
+    permission: "&cVous n'avez pas la permission de faire ça !"

@@ -1,0 +1,8 @@
+name: Death-Ulriam
+version: 1.0
+main: fr.hillwalk.death.Death
+api-version: 1.16
+
+commands:
+  ulriam:
+    description: Commande principale
