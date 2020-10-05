@@ -1,6 +1,7 @@
 package fr.hillwalk.death.listener;
 
 import fr.hillwalk.death.Death;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -17,12 +18,11 @@ public class HitEvent implements Listener {
     Death instance = JavaPlugin.getPlugin(Death.class);
 
     @EventHandler(priority = EventPriority.LOW)
-    public void onPlayerHit(EntityDamageByEntityEvent e){
+    public void onPlayerHit(EntityDamageEvent e){
 
         if(e.getEntity() instanceof Player){
 
-            if(e.getCause() != EntityDamageEvent.DamageCause.ENTITY_ATTACK){
-
+            if(((Player) e.getEntity()).getKiller() != null){
             if(instance.hitList().get(e.getEntity().getUniqueId()) == null){
 
                 instance.hitList().put(e.getEntity().getUniqueId(), true);
@@ -33,14 +33,11 @@ public class HitEvent implements Listener {
 
             }
 
-            } else{
+        }else {
                 instance.hitList().put(e.getEntity().getUniqueId(), false);
             }
-
-
-
-
         }
+
 
 
 

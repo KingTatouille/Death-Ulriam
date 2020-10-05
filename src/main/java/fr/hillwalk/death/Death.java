@@ -2,6 +2,7 @@ package fr.hillwalk.death;
 
 import fr.hillwalk.death.commands.Commandes;
 import fr.hillwalk.death.config.CustomPotions;
+import fr.hillwalk.death.listener.ConsumeEvent;
 import fr.hillwalk.death.listener.DeathEvent;
 import fr.hillwalk.death.listener.HitEvent;
 import fr.hillwalk.death.listener.RespawnEvent;
@@ -49,6 +50,7 @@ public class Death extends JavaPlugin {
         pm.registerEvents(new DeathEvent(), this);
         pm.registerEvents(new HitEvent(), this);
         pm.registerEvents(new RespawnEvent(), this);
+        pm.registerEvents(new ConsumeEvent(), this);
 
 
 
